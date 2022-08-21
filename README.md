@@ -1,4 +1,4 @@
-# Eatudos-de-Python
+# Estudos-de-Python
 ##Arquivo de estudos com meus promeiros codigos, e coisas que aprendi, e testes de conhecimento## 
 ## matemática##
 n1 = int(input('digite um valor:'))
@@ -125,4 +125,60 @@ def game():
         else:
             print("parabéns! O número gerado foi", resposta, "acertou em", tentativa, "tentativas")
 while True:
-    game()
+ #   game()
+    
+## para funcionar o jog odeve-se apagar o sinal "#" na frente da linha 126 game()
+
+#  
+#### CONDICIONAIS IF,ELSE ####
+##if condição: E SE? / o que fazer caso a condição seja verdadeira
+##else: caso contrario / o que fazer cao a condição seja falsa
+
+#  crie um programa para um fundo de investimentos, que analize o quato de taxa deve ser paga:
+#retorno  minimo de 5% ao ano
+#caso não atinja 5% de rentabilidade ele não cobra taxas dos investidores
+#caso atinja 5% é cobrado 2% de taxa dso investidores
+# caso cosiga entregar mais de 20% de retorno será cobrado 4% dos investidores
+ ######################################################################################################
+
+meta = 0.05
+taxa = 0
+rendimento = float(input('Digite a porcentagem do rendimento obtido:'))
+rend = rendimento / 100
+
+if rend> meta:
+    if rend > 0.20:
+        taxa = 0.04
+        print("A taxa aplicada será: {}%".format(taxa *100))
+    
+    else:
+     taxa = 0.02
+     print("A taxa aplicada será: {}%".format(taxa*100))
+    
+else:
+    taxa = 0
+    print ('A taxa aplicada será: {}%'.format(taxa*100))    
+
+#########################################################################
+### programa que calcula meta de vendedor###
+### se atingir meta ganha o dobro de comissão###
+### se vender equivalente ao dobro da meta ou ganha bonus de 10% ####
+
+venda = float(input('valor vendido no mês:'))
+metav = float(input("Valor da meta:"))
+comis = venda*0.015
+comismet = comis*2
+bonus = comismet * 0.1
+comibon = comismet + bonus
+
+
+if venda >= metav:
+          
+    if venda >= metav*2:
+          print ("parabéns você estrassalhou a meta!! vendeu 2x mais que o esperado, então sua comissão será {} ".format(comibon))
+    else:
+         print(" Sua comissão será de {}".format(comis*2))       
+
+else:
+    print ("Sua comissão será {}".format(comis))
+    print (" Esperamos qeu na proxia você atinja a meta!")
